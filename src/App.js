@@ -1,12 +1,14 @@
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 function App() {
   return (
     <div className="App">
-      <h1><Header /></h1>
+      <h1>
+        <Header />
+      </h1>
       <Container>
         <div>
           <List />
@@ -19,10 +21,10 @@ function App() {
   );
 }
 
-
 const Container = styled.div`
-display:flex;
+  display: flex;
+  justify-content: space-between;
+  
 `;
-
 
 export default App;
