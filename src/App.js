@@ -24,6 +24,9 @@ function App() {
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  div{
+    width:50%;
+  }
   
 `;
 
