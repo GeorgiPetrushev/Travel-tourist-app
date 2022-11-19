@@ -6,9 +6,9 @@ import styled from "styled-components";
 function App() {
   return (
     <div className="App">
-      <div className="header">
+      <Tittle>
         <Header />
-      </div>
+      </Tittle>
       <Container>
         <div className="list">
           <List />
@@ -20,19 +20,20 @@ function App() {
     </div>
   );
 }
-const Tittle = styled.div``
+const Tittle = styled.div`
+  height: 10vh;
+`;
 
 const Container = styled.div`
   display: flex;
-  .list{
-   width:30%;
-   min-height:90vh;
-   background-color:red;
+  .list {
+    width: 30%;
+    min-height: 90vh;
+    background-color: red;
   }
-  .map{
-   width:60%;
+  .map {
+    width: 60%;
   }
-  
 `;
 
 export default App;
