@@ -6,15 +6,20 @@ import { BiSearchAlt } from "react-icons/bi";
 const Header = () => {
   return (
     <StyleHeader>
-      <div><h2>Travel Advisor</h2></div>
+      <div>
+        <h2>Travel Advisor</h2>
+      </div>
       <div className="header-right">
         {" "}
         <h2>Explore New Places</h2>
-        <BiSearchAlt className="search-icon" />
-        <input
-          placeholder="Search for place ..."
-          className="header-input"
-        ></input>
+        <div className="icon-and-search">
+          {" "}
+          <BiSearchAlt className="search-icon" />
+          <input
+            placeholder="Search for place ..."
+            className="header-input"
+          ></input>
+        </div>
       </div>
     </StyleHeader>
   );
@@ -31,10 +36,18 @@ const StyleHeader = styled.div`
   }
   .header-right {
     display: flex;
+    align-items: center;
+  }
+  .icon-and-search{
+    margin-right:3rem;
+    background-color:rgba(255,255,255,0.3);
+    height:60%;
+    text-align: center;
+    
   }
   .search-icon {
-    margin-left: 1rem;
-    font-size: 2rem;
+    margin-left: 0.4rem;
+    font-size: 1.2rem;
     height: auto;
   }
   .header-input {
