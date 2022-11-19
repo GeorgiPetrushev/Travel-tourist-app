@@ -21,7 +21,8 @@ function App() {
   );
 }
 const Tittle = styled.div`
-  height: 10vh;
+  height:10vh
+  font-size:0.8rem;
 `;
 
 const Container = styled.div`
