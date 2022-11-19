@@ -6,26 +6,31 @@ import styled from "styled-components";
 function App() {
   return (
     <div className="App">
-      <h1>
+      <div className="header">
         <Header />
-      </h1>
+      </div>
       <Container>
-        <div>
+        <div className="list">
           <List />
         </div>
-        <div>
+        <div className="map">
           <Map />
         </div>
       </Container>
     </div>
   );
 }
+const Tittle = styled.div``
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  div{
-    width:50%;
+  .list{
+   width:30%;
+   min-height:90vh;
+   background-color:red;
+  }
+  .map{
+   width:60%;
   }
   
 `;
