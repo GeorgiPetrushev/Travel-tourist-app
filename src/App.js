@@ -30,7 +30,6 @@ const Container = styled.div`
   .list {
     width: 30%;
     min-height: 90vh;
-    background-color: red;
   }
   .map {
     width: 60%;
