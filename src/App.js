@@ -21,15 +21,16 @@ function App() {
   );
 }
 const Tittle = styled.div`
-  height:10vh
+  height:10vh;
   font-size:0.8rem;
+  
 `;
 
 const Container = styled.div`
   display: flex;
   .list {
     width: 30%;
-    min-height: 90vh;
+    min-height: 80vh;
   }
   .map {
     width: 70%;
