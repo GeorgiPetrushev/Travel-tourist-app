@@ -1,20 +1,35 @@
 import React, { useState } from "react";
+import Details from "../Details/Details";
 
 const List = () => {
   const [type, setType] = useState("restaurant");
   const [rating, setRating] = useState("");
+  const plaices = [
+    { name: "beer club" },
+    { name: "strip club" },
+    { name: "pool club" },
+    { name: "beer club" },
+    { name: "strip club" },
+    { name: "pool club" },
+    { name: "beer club" },
+    { name: "strip club" },
+    { name: "pool club" },
+  ];
+
   const TriggerType = (e) => {
     setType(e.target.value);
   };
-  const TriggerRating = (e) =>{
-    setRating(e.target.value)
-  }
+
+  const TriggerRating = (e) => {
+    setRating(e.target.value);
+  };
+
   return (
     <div>
       <h4> Restaurant , Hotels and Attraction near you</h4>
 
       <div>
-      <label>Type</label>
+        <label>Type</label>
         <select value={type} onChange={TriggerType}>
           <option value="restaurant">Restaurant</option>
           <option value="hotels">Hotels</option>
@@ -30,6 +45,11 @@ const List = () => {
           <option value={4}>4+ Stars</option>
           <option value={4.5}>4.5+ Stars</option>
         </select>
+      </div>
+      <div>
+        {plaices?.map((plaice) => (
+          <h1><Details plaice={plaice}/></h1>
+        ))}
       </div>
     </div>
   );
