@@ -25,8 +25,7 @@ const Map = () => {
           mapContainerStyle={containerStyle}
           defaultCenter={center}
           center={center}
-          zoom={100}
-          onCildClick={``}
+          zoom={5}
           options={``}
         >
           { /* Child components, such as markers, info windows, etc. */ }
