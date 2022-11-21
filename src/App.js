@@ -32,7 +32,7 @@ const Container = styled.div`
     min-height: 90vh;
   }
   .map {
-    width: 60%;
+    width: 70%;
   }
 `;
 

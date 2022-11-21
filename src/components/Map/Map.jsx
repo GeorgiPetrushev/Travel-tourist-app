@@ -1,28 +1,38 @@
 import React from "react";
-import GoogleMapReact from "google-map-react";
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 import styled from "styled-components";
 
 const Map = () => {
 
 
-  const coordinates = { lat: 0 , lng: 0 }
+  const containerStyle = {
+    width: "100%",
+    height: "90vh"
+  };
+  const center = {
+    lat: 0,
+    lng: 0
+  };
 
   return (
     <StyleMap>
       <div>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
-        defaultCenter={coordinates}
-        center = {coordinates}
-        defaultZoom={15}
-        margin={[50,50,50,50]}
-        options = {``}
-        onChange = {``}
-        onChildClick= {``}
+      <LoadScript
+        googleMapsApiKey= {process.env.REACT_APP_GOOGLE_KEY}
       >
-
-      </GoogleMapReact>
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          defaultCenter={center}
+          center={center}
+          zoom={100}
+          onCildClick={``}
+          options={``}
+        >
+          { /* Child components, such as markers, info windows, etc. */ }
+          <></>
+        </GoogleMap>
+      </LoadScript>
       </div>
     </StyleMap>
   );
